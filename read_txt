@@ -1,0 +1,14 @@
+path_original='/home/flychen59/Downloads/DeepCalib-master/123.txt'
+path_to='/home/flychen59/Downloads/DeepCalib-master/'
+data_num=[]
+with open(path_original,'r') as of:
+    line=of.readlines()
+    for i in line:
+        txt=i.split(' ')
+        txt2=txt[1].rstrip('\n').split(':')[1]
+        num=txt[0]
+        result=txt[1]
+        with open(path_to+num+'.txt','w') as f:
+            f.write('focal length'+' '+result)
+
+
